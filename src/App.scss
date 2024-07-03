@@ -1,3 +1,42 @@
-h1 {
-    color: red;
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+@import "./components/MobileNavbar/MobileNavbar.scss";
+@import "./components/SideNavbar/SideNavbar.scss";
+
+:root {
+  --background-color: #141414;
+  --background-color-sec: #1e1e1e;
+  --text-color: #F4F4F4;
+  --accent-color: #FFD540;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.app-content {
+  padding: 1.4em;
+}
+
+@media (min-width: 768px) {
+  .mobile-navbar {
+    display: none !important;
+  }
+
+  .side-navbar {
+    display: block !important;
+  }
+
+  body {
+    margin-left: 160px;
+  }
 }
